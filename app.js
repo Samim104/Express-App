@@ -6,7 +6,7 @@ const port = process.env.PORT || 8000
 app.use(express.json())
 app.get('/', async (req, res) => {
     const jsondata = await db.find()
-    res.send(jsondata[3])
+    res.send(jsondata)
 })
 
 app.listen(port, () => { console.log("> app listening on port " + port); })
